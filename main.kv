@@ -1,0 +1,63 @@
+<WatchList>
+	name: "watch"
+	MDBoxLayout:
+		orientation: 'vertical'
+
+		MDCard:
+			elevation: 10
+			size_hint_y: None
+			height: dp(100)
+			md_bg_color: 0,1,1,1
+			spacing: 10
+			orientation: "vertical"
+			MDBoxLayout:
+				padding: 10
+				MDIcon:
+					icon: "information"
+				MDLabel:
+					text: "Data Manager"
+					size_hint_x: 3
+					font_style: "H6"
+			MDBoxLayout:
+				MDLabel:
+					text: "#"
+					halign: "center"
+					size_hint_x: .5
+				MDLabel:
+					text: "Name"
+					halign: "center"
+				MDLabel:
+					text: "Episodes"
+					halign: "center"
+					size_hint_x: .8
+		MDSeparator:
+
+		ScrollView:
+			do_scroll: False, True
+			MDBoxLayout:
+				orientation: "vertical"
+				size_hint_y: None
+				height: self.minimum_height
+				MDCard:
+					elevation: 10
+					size_hint_y: None
+					height: dp(90)
+					ripple_behavior: True
+					MDLabel:
+						text: "1."
+						halign: "center"
+						size_hint_x: .5
+					MDLabel:
+						text: "The Daily Life of the Immortal King"
+						halign: "center"
+					MDLabel:
+						text: "24"
+						halign: "center"
+						size_hint_x: .8
+				MDSeparator:
+				
+
+	MDFloatingActionButton:
+		icon: "plus"
+		pos_hint: {'center_x': .85, "center_y":.1}
+		on_press: app.show_dialog()
